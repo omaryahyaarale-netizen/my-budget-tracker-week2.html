@@ -1,6 +1,6 @@
 -- =========================================
 -- School Management Database
--- Author: [Your Name]
+-- Author: [OMAR YAHYA]
 -- Description: Database for managing students,
 -- teachers, courses, and enrollments
 -- =========================================
@@ -106,3 +106,41 @@ JOIN courses c ON e.course_id = c.course_id;
 SELECT c.course_name, t.first_name, t.last_name
 FROM courses c
 JOIN teachers t ON c.teacher_id = t.teacher_id;
+
+# School Management Database
+
+## Overview
+A relational database for managing a school's students, teachers,
+courses, and course enrollments — built using MySQL.
+
+## Tables
+- **students** — stores student personal details
+- **teachers** — stores teacher personal details
+- **courses** — stores course info, linked to the teacher who teaches it
+- **enrollments** — links students to the courses they're taking, with grades
+
+## Entity Relationships
+- One teacher can teach many courses (1-to-many)
+- One student can enroll in many courses, and each course can have
+  many students (many-to-many, via the `enrollments` table)
+
+## How to Run
+1. Open MySQL Workbench or your terminal MySQL client
+2. Run the script:
+   ```bash
+   mysql -u your_username -p < school_management.sql
+   ```
+   Or copy-paste the contents of `school_management.sql` into
+   MySQL Workbench and execute it.
+
+## Sample Queries Included
+- View all students, teachers, courses, and enrollments
+- Join query showing each student's enrolled courses and grades
+- Join query showing each course with its assigned teacher
+
+## Entity-Relationship Diagram
+See `er_diagram.png` (generated via dbdiagram.io) for a visual layout
+of the tables and their relationships.
+
+## Author
+[OMAR YAHYA]
