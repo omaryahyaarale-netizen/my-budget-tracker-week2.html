@@ -1,0 +1,24 @@
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid hsl(155, 81%, 35%);
+  padding: 8px;
+  text-align: left;
+}
+
+.expense-table thead tr {
+  background-color: #1114a4;
+  color: #ffffff;
+}
+
+.expense-table tbody tr:nth-child(even) {
+  background-color: #52d73a;
+}
+
+.expense-table tbody tr:nth-child(odd) {
+  background-color: hsl(0, 68%, 29%);
+}
